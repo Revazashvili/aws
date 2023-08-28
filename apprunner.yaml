@@ -1,0 +1,8 @@
+version: 1.0
+runtime: dotnet6
+build:
+  commands:
+    build:
+      - dotnet publish AWSAppRunner/AWSAppRunner.csproj -c Release -o out
+run:
+  command: dotnet out/AWSAppRunner.dll
