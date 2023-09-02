@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSAppRunner", "AWSAppRunner\AWSAppRunner.csproj", "{94449D65-0406-474C-BA1B-2DB534172538}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSLambda", "AWSLambda\src\AWSLambda\AWSLambda.csproj", "{A1D71A9E-89F5-4400-A085-11699D4F30FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{94449D65-0406-474C-BA1B-2DB534172538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94449D65-0406-474C-BA1B-2DB534172538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94449D65-0406-474C-BA1B-2DB534172538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D71A9E-89F5-4400-A085-11699D4F30FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D71A9E-89F5-4400-A085-11699D4F30FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D71A9E-89F5-4400-A085-11699D4F30FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D71A9E-89F5-4400-A085-11699D4F30FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
