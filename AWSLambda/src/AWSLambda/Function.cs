@@ -12,14 +12,6 @@ public class Function
     [LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
     public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest request, ILambdaContext context)
     {
-        if (request is null)
-        {
-            return new APIGatewayProxyResponse
-            {
-                StatusCode = 500,
-                Body = "request is null"
-            };
-        }
         var name = request.QueryStringParameters is not null && 
                    request.QueryStringParameters.TryGetValue("name", out var value) ? value : "No Name";
         context.Logger.Log($"Got Name: {name}");
