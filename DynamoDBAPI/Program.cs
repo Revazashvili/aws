@@ -5,14 +5,19 @@ using Amazon.Runtime;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Configuration
+    .AddJsonFile("appsettings.debug.json");
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var credentials = new BasicAWSCredentials("AKIATRGB7XIRT47KJVTC","8TN9Z1HB+rEWt4gVYfVIgyEzKDI7bEIBtPzjoAyp");
+var accessKey = builder.Configuration.GetSection("DynamoDBSettings:AccessKey").Value;
+var secretKey = builder.Configuration.GetSection("DynamoDBSettings:SecretKey").Value;
+
+var credentials = new BasicAWSCredentials(accessKey,secretKey);
 var config = new AmazonDynamoDBConfig
 {
     RegionEndpoint = RegionEndpoint.USEast1
